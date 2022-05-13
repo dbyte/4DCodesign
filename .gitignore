@@ -1,0 +1,20 @@
+# Temporarily/generated unit test resources
+/tests/resources/temp/
+
+# Large 4D template apps for unit tests need to be created manually
+# and locally. Tests using these app bundles are skipped with a hint
+# unless they exist.
+/tests/resources/fixtures/4D-template-*.app
+
+# System files
+.DS_Store
+
+# Python
+__pycache__
+
+# IDEs
+# .idea
+# *.iml
+#
+# .code-workspace
+# .vscode/

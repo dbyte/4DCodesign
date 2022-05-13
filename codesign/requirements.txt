@@ -1,0 +1,15 @@
+# This file can be passed into pip as an argument.
+# It lists all required external dependencies (libraries) we need.
+# To install these into the current selected Python interpreter,
+# simply cd into my parent directory and call this cmd on your cmd-line client:
+#
+# pip install -r requirements.txt
+#
+# Notes
+# '~=' will download & install the latest version of the package, f.e. greater than
+# or equal to 4.62.3, but still in the 4.62.* version, so it won't
+# download 4.63.0 for example.
+# If no version is given, it will always download the latest version.
+
+lxml~=4.7.0  # Is a pythonic binding for the C libraries libxml2 and libxslt
+lxml-stubs  # lxml is untyped, this lib adds stubs which are used by IDEs to support type-ahead
