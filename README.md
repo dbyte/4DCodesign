@@ -7,6 +7,12 @@ A Python port of Keisuke Miyako's [4d-class-build-application, SignApp.4dm](http
 ![pythonVersion](https://img.shields.io/badge/Python-3.10-blue)
 
 ## Preparation
+### Codesigning identity
+For the signing process and its unit tests to succeed, a valid Apple developer certificate must be installed in the executing machine's keychain.
+Its name must begin with "Developer ID Application:". Example: "Developer ID Application: Your Organization (1AB1234567)".
+The code is prepared for optional passing of that name as another argument via command line, but currently not activated yet.
+
+### Python dependencies
 For XML operations, we decided to use the lxml library for convenient and fast handling.
 To install the external dependency
 
@@ -21,30 +27,34 @@ To run codesigning from the command line, simply
 
 You may pass in 4D standalone, client and server apps.
 
-Default log level is INFO. You can change it by passing a 2nd parameter.
-Possible values are FATAL, ERROR, WARNING, INFO, DEBUG.
+Default log level is ```INFO```. You can change it by passing a 2nd parameter.
+Possible values are ```FATAL, ERROR, WARNING, INFO, DEBUG```.
 
-To trim your personal signing options, have a look at module 'codesign_config' -->
-properties: runner_options, default_info_plist_properties, default_hardened_runtime_entitlements.
+To trim your personal signing options, have a look at module ```codesign_config``` -->
+properties: ```runner_options```, ```default_info_plist_properties```, ```default_hardened_runtime_entitlements```.
 
 Cheers!
 
 ## Unit tests
+### Preparation
+To run signing integration tests on your 4D `*.app`, you manually need to copy your `*.app` into the dedicated
+`4DCodesign/tests/resources/fixtures` directory and rename it to `4D-template-complete.app`.
 
-### Prepare
-Coming soon
+- This is the expected approach for standalone, client and server type applications. <br>
+- However, the file name must always be renamed as described above. <br>
+- **Most of the tests will be skipped if you don't do so.**
 
-### Run from the command line
+### Run unit tests from the command line
 To run tests via command line, cd into the project root directory ```4DCodesign``` and
 
-- Run ALL tests:
+- Run all tests:
   ```python -m unittest discover -v```
 
-- Run all tests for package 'core':
+- Run tests for package `core`:
   ```python -m unittest discover -v -s tests.core```
 
-- Run all tests for package 'util':
+- Run tests for package `util`:
   ```python -m unittest discover -v -s tests.util```
 
-- Run test of module 'test_processes.py' for package 'util':
+- Run tests in package `util` for module `test_processes.py`:
   ```python -m unittest -v tests.util.test_processes```
