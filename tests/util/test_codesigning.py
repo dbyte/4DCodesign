@@ -6,8 +6,9 @@ from unittest import TestCase
 
 from core import IS_WINDOWS
 from core.codesign_config import CodesignConfig
-from testhelper import create_app_template_file_copy, create_temp_testing_dir, PATH_TO_4D_TEMPLATE_APP, \
-    MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE, DEVELOPER_ID_APPLICATION_ENTRY
+from tests.testhelper import create_app_template_file_copy, PATH_TO_4D_TEMPLATE_APP, \
+    MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE, DEVELOPER_ID_APPLICATION_ENTRY, create_temp_testing_dir, PATH_TO_FIXTURE_DIR, \
+    PATH_TO_TEMP_DIR
 from util import codesigning, processes
 from util.logging import set_root_loglevel
 
@@ -36,8 +37,8 @@ class TestCodesigning(TestCase):
         # Keep our test fixture save - create a copy for tests.
         # - Mission Control.app is a small Apple application
         # - Signed Mission Control.app is our temporary working copy which gets modified by tests.
-        template_item_to_sign: Path = Path('tests/resources/fixtures/Mission Control.app')
-        testing_item_to_sign: Path = Path('tests/resources/temp/Signed Mission Control.app')
+        template_item_to_sign: Path = PATH_TO_FIXTURE_DIR / 'Mission Control.app'
+        testing_item_to_sign: Path = PATH_TO_TEMP_DIR / 'Signed Mission Control.app'
         shutil.copytree(template_item_to_sign, testing_item_to_sign, dirs_exist_ok=True)
 
         # when
@@ -86,7 +87,7 @@ class TestCodesigning(TestCase):
         shutil.rmtree(temp_entitlements_plist.parent, ignore_errors=True)
 
     def test_remove_extended_attributes__recursivelyRemovesAllExtendedAttributes(self):
-        bundle_stub: Path = Path('tests/resources/temp/Test.app')
+        bundle_stub: Path = PATH_TO_TEMP_DIR / 'Test.app'
 
         # Just an inner helper function to read extended attributes from a bundle
         def get_attributes() -> list:
@@ -136,7 +137,7 @@ class TestCodesigning(TestCase):
 
     def test_run_install_name_tool__raisesIfFileOrDirectoryNotExists(self):
         # given
-        source: Path = Path('tests/resources/fixtures/Mission Control.app')
+        source: Path = PATH_TO_FIXTURE_DIR / 'Mission Control.app'
         _from: str = '@executable_path/../Frameworks/Chromium Embedded Framework.framework/Chromium Embedded Framework'
         _to: str = '@executable_path/../../../../Frameworks/Chromium Embedded Framework.framework/' \
                    'Chromium Embedded Framework'

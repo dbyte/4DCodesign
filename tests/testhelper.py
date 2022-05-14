@@ -7,7 +7,14 @@ from typing import Final
 
 from util import processes
 
-PATH_TO_4D_TEMPLATE_APP: Final[Path] = Path('tests/resources/fixtures/4D-template-complete.app')
+PATH_TO_TEST_RESOURCES: Final[Path] = Path(__file__).parent / 'resources'
+print(PATH_TO_TEST_RESOURCES.resolve())
+
+PATH_TO_TEMP_DIR: Final[Path] = PATH_TO_TEST_RESOURCES / 'temp'
+
+PATH_TO_FIXTURE_DIR: Final[Path] = PATH_TO_TEST_RESOURCES / 'fixtures'
+
+PATH_TO_4D_TEMPLATE_APP: Final[Path] = PATH_TO_FIXTURE_DIR / '4D-template-complete.app'
 """ This .app file may be large, thus not versioned. Simply copy your 4D app bundle to this path
 and rename it to this filename to run tests on it.  """
 
@@ -26,7 +33,7 @@ def create_temp_testing_dir() -> Path:
 
     :return: Path to the empty temporary testing-directory
     """
-    path_to_temp_dir: Path = Path('tests/resources/temp').resolve()
+    path_to_temp_dir: Path = PATH_TO_TEMP_DIR.resolve()
 
     shutil.rmtree(path_to_temp_dir, ignore_errors=True)
     path_to_temp_dir.mkdir()
