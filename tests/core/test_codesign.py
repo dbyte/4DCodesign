@@ -13,8 +13,8 @@ from lxml.etree import _ElementTree as etree_ElementTree
 from core import IS_WINDOWS
 from core.codesign import Codesign
 from core.codesign_config import CodesignConfig
-from testhelper import create_temp_testing_dir, PATH_TO_4D_TEMPLATE_APP, MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE, \
-    create_app_template_file_copy, remove_signing, DEVELOPER_ID_APPLICATION_ENTRY
+from tests.testhelper import create_temp_testing_dir, PATH_TO_4D_TEMPLATE_APP, MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE, \
+    create_app_template_file_copy, remove_signing, DEVELOPER_ID_APPLICATION_ENTRY, PATH_TO_FIXTURE_DIR, PATH_TO_TEMP_DIR
 from util import processes
 from util.logging import set_root_loglevel
 
@@ -418,8 +418,8 @@ class TestCodesign(TestCase):
         # Keep our test fixture save - create a copy for tests.
         # - 4DTest_Info.plist is a valid build artifact of a 4D Build.
         # - Modified_Info.plist is our temporary working copy which gets modified by tests.
-        template_info_plist_file = Path('tests/resources/fixtures/4DTest_Info.plist')
-        testing_info_plist_file = Path('tests/resources/temp/Modified_Info.plist')
+        template_info_plist_file = PATH_TO_FIXTURE_DIR / '4DTest_Info.plist'
+        testing_info_plist_file = PATH_TO_TEMP_DIR / 'Modified_Info.plist'
 
         expected_properties: dict = {
             'NSRequiresAquaSystemAppearance': 'Test some AquaSystemAppearance',
@@ -507,8 +507,8 @@ class TestCodesign(TestCase):
         # Keep our test fixture save - create a copy for tests.
         # - 4DTest_Info.plist is a valid build artifact of a 4D build.
         # - Modified_Info.plist is our temporary working copy which gets modified by tests.
-        template_info_plist_file = Path('tests/resources/fixtures/4DTest_Info.plist')
-        testing_info_plist_file = Path('tests/resources/temp/Modified_Info.plist')
+        template_info_plist_file = PATH_TO_FIXTURE_DIR / '4DTest_Info.plist'
+        testing_info_plist_file = PATH_TO_TEMP_DIR / 'Modified_Info.plist'
         testing_info_plist_file.unlink(missing_ok=True)  # cleanup
         shutil.copy(template_info_plist_file, testing_info_plist_file)
 
