@@ -11,6 +11,7 @@ Welcome to 4DCodesign's documentation!
    :caption: Contents:
 
    codesign
+   tests
 
 
 Indices and tables

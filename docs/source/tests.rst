@@ -1,10 +1,10 @@
-codesign package
-================
+tests package
+=============
 
 Package contents
 ----------------
 
-.. automodule:: codesign
+.. automodule:: tests
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,16 +15,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   codesign.core
-   codesign.util
+   tests.core
+   tests.util
 
 Submodules
 ----------
 
-codesign.main module
---------------------
+tests.testhelper module
+-----------------------
 
-.. automodule:: codesign.main
+.. automodule:: tests.testhelper
    :members:
    :undoc-members:
    :show-inheritance:

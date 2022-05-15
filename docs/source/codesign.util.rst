@@ -4,7 +4,7 @@ codesign.util package
 Package contents
 ----------------
 
-.. automodule:: util
+.. automodule:: codesign.util
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ Submodules
 codesign.util.codesigning module
 --------------------------------
 
-.. automodule:: util.codesigning
+.. automodule:: codesign.util.codesigning
    :members:
    :undoc-members:
    :show-inheritance:
@@ -23,7 +23,7 @@ codesign.util.codesigning module
 codesign.util.logging module
 ----------------------------
 
-.. automodule:: util.logging
+.. automodule:: codesign.util.logging
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ codesign.util.logging module
 codesign.util.processes module
 ------------------------------
 
-.. automodule:: util.processes
+.. automodule:: codesign.util.processes
    :members:
    :undoc-members:
    :show-inheritance:

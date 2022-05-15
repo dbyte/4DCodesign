@@ -12,6 +12,8 @@ LOGGING: Final = logging
 """ Just an indirection to avoid additional imports of python's 'logging'
 module in other modules. Use this at the top of a module to init a logger,
 for example: logger = LOGGING.getLogger(__name__)
+
+:meta hide-value:
 """
 
 _is_configured: bool = False

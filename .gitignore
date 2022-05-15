@@ -6,6 +6,9 @@
 # unless they exist.
 **/tests/resources/fixtures/4D-template-*.app
 
+# Sphinx documenting system
+**/docs/build/
+
 # System files
 .DS_Store
 

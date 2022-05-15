@@ -11,5 +11,6 @@
 # download 4.63.0 for example.
 # If no version is given, it will always download the latest version.
 
-lxml~=4.7.0  # Is a pythonic binding for the C libraries libxml2 and libxslt
+lxml~=4.7.0  # Pythonic binding for the C libraries libxml2 and libxslt
 lxml-stubs  # lxml is untyped, this lib adds stubs which are used by IDEs to support type-ahead
+sphinx~=4.5.0  # Documenting tool which can also parse Python docstrings to html, pdf etc.

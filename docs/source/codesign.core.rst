@@ -4,7 +4,7 @@ codesign.core package
 Package contents
 ----------------
 
-.. automodule:: core
+.. automodule:: codesign.core
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,15 +15,15 @@ Submodules
 codesign.core.codesign module
 -----------------------------
 
-.. automodule:: core.codesign
+.. automodule:: codesign.core.codesign
    :members:
    :undoc-members:
    :show-inheritance:
 
-codesign.core.codesign\_config module
--------------------------------------
+codesign.core.codesign_config module
+------------------------------------
 
-.. automodule:: core.codesign_config
+.. automodule:: codesign.core.codesign_config
    :members:
    :undoc-members:
    :show-inheritance:
