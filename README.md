@@ -6,6 +6,9 @@ A Python port of Keisuke Miyako's [4d-class-build-application, SignApp.4dm](http
 ![fourdVersion](https://img.shields.io/badge/4D%20compatibility-v19R4%2B-blue)
 ![pythonVersion](https://img.shields.io/badge/Python-3.10-blue)
 
+## Docs
+Code documentation can be found [here](https://dbyte.github.io/4DCodesign/).
+
 ## Preparation
 ### Codesigning identity
 For the signing process and its unit tests to succeed, a valid Apple developer certificate must be installed in the executing machine's keychain.
