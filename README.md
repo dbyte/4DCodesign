@@ -10,7 +10,8 @@ A Python port of Keisuke Miyako's [4d-class-build-application, SignApp.4dm](http
 ### Codesigning identity
 For the signing process and its unit tests to succeed, a valid Apple developer certificate must be installed in the executing machine's keychain.
 Its name must begin with "Developer ID Application:". Example: "Developer ID Application: Your Organization (1AB1234567)".
-The code is prepared for optional passing of that name as another argument via command line, but currently not activated yet.
+The code is prepared for optional passing of that name as another argument via command line, but not activated yet.
+It will be looked up in your keychain. The first found entry beginning with "Developer ID Application:" will be selected for the signing process.
 
 ### Python dependencies
 For XML operations, we decided to use the lxml library for convenient and fast handling.
@@ -37,18 +38,21 @@ Cheers!
 
 ## Unit tests
 ### Preparation
-To run signing integration tests on your 4D `*.app`, you manually need to copy your `*.app` into the dedicated
+1. To run signing integration tests on your 4D `*.app`, you manually need to copy your `*.app` into the dedicated
 `4DCodesign/tests/resources/fixtures` directory and rename it to `4D-template-complete.app`.
 
 - This is the expected approach for standalone, client and server type applications. <br>
 - However, the file name must always be renamed as described above. <br>
 - **Most of the tests will be skipped if you don't do so.**
 
+2. At module tests/testhelper, replace the value of constant DEVELOPER_ID_APPLICATION_ENTRY with the name of your installed
+Apple Developer Certificate name, for example ''Developer ID Application: My Company (2YZ3456789)''
+
 ### Run unit tests from the command line
 To run tests via command line, cd into the project root directory ```4DCodesign``` and
 
 - Run all tests:
-  ```python -m unittest discover -v```
+  ```python -m unittest discover -v -s tests -t .```
 
 - Run tests for package `core`:
   ```python -m unittest discover -v -s tests.core```
