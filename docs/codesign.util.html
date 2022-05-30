@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>codesign.util package &#8212; 4DCodesign 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests package" href="tests.html" />
+    <link rel="prev" title="codesign.core package" href="codesign.core.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">4DCodesign</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="codesign.html">codesign package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#module-codesign">Package contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="codesign.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#module-codesign.main">codesign.main module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="codesign.html">codesign package</a><ul>
+      <li>Previous: <a href="codesign.core.html" title="previous chapter">codesign.core package</a></li>
+      <li>Next: <a href="tests.html" title="next chapter">tests package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.core.html" title="Previous document">codesign.core package</a>
+        </li>
+        <li>
+          <a href="tests.html" title="Next document">tests package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="codesign-util-package">
+<h1>codesign.util package<a class="headerlink" href="#codesign-util-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-codesign.util">
+<span id="package-contents"></span><h2>Package contents<a class="headerlink" href="#module-codesign.util" title="Permalink to this headline">¶</a></h2>
+<p>Common utilities for frequently used objects/functions.</p>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-codesign.util.codesigning">
+<span id="codesign-util-codesigning-module"></span><h2>codesign.util.codesigning module<a class="headerlink" href="#module-codesign.util.codesigning" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.convert_to_plist_format">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">convert_to_plist_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_plist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.codesigning.convert_to_plist_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts XML file to plist format (re-writing the file). Will add DOCTYPE etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_plist</strong> – Path to the origin plist file which was re-written using an XML parser.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.create_entitlements_plist">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">create_entitlements_plist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entitlements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#codesign.util.codesigning.create_entitlements_plist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds entitlements for hardened runtime and re-signs the bundle
+located at ‘self.path_to_app_bundle’.
+NOTE: The caller is responsible for removing the (parent) temp dir after using it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entitlements</strong> – Dictionary containing the entitlements which go into the created .plist file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path to the temporary created ‘entitlements.plist’ within a TemporaryDirectory.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.remove_extended_attributes">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">remove_extended_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.codesigning.remove_extended_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively removes extended attributes from a file or directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_item</strong> – Path to the file or bundle for which to call xattr -r</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.run_codesign_command">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">run_codesign_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">subprocess.CompletedProcess</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">subprocess.CompletedProcess</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#codesign.util.codesigning.run_codesign_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function which runs the main Apple ‘codesign’ command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_item</strong> – Path to the file or bundle being signed</p></li>
+<li><p><strong>identity</strong> – Name (aka identity) of an installed codesigning-certificate</p></li>
+<li><p><strong>args</strong> – More arguments, for example ‘–deep’, ‘–force’, ‘–options=runtime’, ‘–entitlements’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CompletedProcess instance, containing returncode, stdin, stdout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.run_codesign_command_for_hardened_runtime">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">run_codesign_command_for_hardened_runtime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_plist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_to_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">subprocess.CompletedProcess</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">subprocess.CompletedProcess</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#codesign.util.codesigning.run_codesign_command_for_hardened_runtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper function which runs the main Apple ‘codesign’ command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_plist</strong> – Path to the plist file which holds properties for hardened runtime</p></li>
+<li><p><strong>path_to_item</strong> – Path to the file or bundle being signed</p></li>
+<li><p><strong>identity</strong> – Name (aka identity) of an installed codesigning-certificate</p></li>
+<li><p><strong>args</strong> – More arguments, for example ‘–deep’, ‘–force’, ‘–options=runtime’, ‘–entitlements’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CompletedProcess instance, containing returncode, stdin, stdout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.run_install_name_tool">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">run_install_name_tool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_from</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">subprocess.CompletedProcess</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">subprocess.CompletedProcess</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#codesign.util.codesigning.run_install_name_tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>install_name_tool changes the dynamic shared library install names
+recorded in a Mach-O binary.
+See also: <a class="reference external" href="https://www.unix.com/man-page/osx/1/install_name_tool/">https://www.unix.com/man-page/osx/1/install_name_tool/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Binary executable which must be informed to use a different path to an item</p></li>
+<li><p><strong>_from</strong> – Old path of the item which is referenced by the binary executable</p></li>
+<li><p><strong>_to</strong> – New path of the item which will be referenced by the binary executable</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CompletedProcess instance, containing returncode, stdin, stdout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.codesigning.run_remove_codesign_command">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.codesigning.</span></span><span class="sig-name descname"><span class="pre">run_remove_codesign_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.codesigning.run_remove_codesign_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes signature from given file or bundle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_item</strong> – Path to file or bundle from which to remove the signature</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-codesign.util.logging">
+<span id="codesign-util-logging-module"></span><h2>codesign.util.logging module<a class="headerlink" href="#module-codesign.util.logging" title="Permalink to this headline">¶</a></h2>
+<p>Utilities and customizing for Python’s standard logging library.
+Should be referenced everywhere instead of the pure Python ‘logging’ library.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">codesign.util.logging.</span></span><span class="sig-name descname"><span class="pre">AzureLogFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></p>
+<p>Custom Azure Pipeline logging Formatter.
+See also: <a class="reference external" href="https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops">https://docs.microsoft.com/en-us/azure/devops/pipelines/scripts/logging-commands?view=azure-devops</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.DEBUG_PREFIX">
+<span class="sig-name descname"><span class="pre">DEBUG_PREFIX</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'##[debug]'</span></em><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.DEBUG_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.ERROR_PREFIX">
+<span class="sig-name descname"><span class="pre">ERROR_PREFIX</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'##[error]'</span></em><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.ERROR_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.WARNING_PREFIX">
+<span class="sig-name descname"><span class="pre">WARNING_PREFIX</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'##[warning]'</span></em><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.WARNING_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.check_emit">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">emitter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.check_emit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator which checks if a dedicated Azure log command
+should be emitted and emits it if true.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.format">
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the specified record as text.</p>
+<p>The record’s attribute dictionary is used as the operand to a
+string formatting operation which yields the returned string.
+Before formatting the dictionary, a couple of preparatory steps
+are carried out. The message attribute of the record is computed
+using LogRecord.getMessage(). If the formatting string uses the
+time (as determined by a call to usesTime(), formatTime() is
+called to format the event time. If there is exception information,
+it is formatted using formatException() and appended to the message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.group_end">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">group_end</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.group_end" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.group_start">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">group_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.group_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.util.logging.AzureLogFormatter.section_start">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">section_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.AzureLogFormatter.section_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="codesign.util.logging.LOGGING">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.logging.</span></span><span class="sig-name descname"><span class="pre">LOGGING</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span></em><a class="headerlink" href="#codesign.util.logging.LOGGING" title="Permalink to this definition">¶</a></dt>
+<dd><p>Just an indirection to avoid additional imports of python’s ‘logging’
+module in other modules. Use this at the top of a module to init a logger,
+for example: logger = LOGGING.getLogger(__name__)</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.logging.set_root_loglevel">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.logging.</span></span><span class="sig-name descname"><span class="pre">set_root_loglevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.util.logging.set_root_loglevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the root logger’s log level filter by name. If the given name
+can’t be resolved to an existing log level, log level falls back to a
+defined default level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – Name of the log level defined in the python ‘logging’ module.
+Constraints: FATAL, ERROR, WARNING, INFO, DEBUG, NOTSET</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-codesign.util.processes">
+<span id="codesign-util-processes-module"></span><h2>codesign.util.processes module<a class="headerlink" href="#module-codesign.util.processes" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.processes.popen_simple">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.processes.</span></span><span class="sig-name descname"><span class="pre">popen_simple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">subprocess.Popen</span></span></span><a class="headerlink" href="#codesign.util.processes.popen_simple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a simple subcommand asynchronously and log its output live.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>commands</strong> – List of commands and arguments as expected in subprocess.Popen</p></li>
+<li><p><strong>subject</strong> – A human-readable subject for that process. Gets printed by the logger.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Instance of subprocess.Popen that was created when running the process</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>SubprocessError</strong> – If return code is not equal 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="codesign.util.processes.run_subprocess">
+<span class="sig-prename descclassname"><span class="pre">codesign.util.processes.</span></span><span class="sig-name descname"><span class="pre">run_subprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">subprocess.CompletedProcess</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">subprocess.CompletedProcess</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#codesign.util.processes.run_subprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simply runs a subprocess but additionally raises on fail with
+concatenated stdout and stderr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>commands</strong> – List of commands and parameters as expected by subprocess.run()</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Result of the completed process (enclosing stdin, stderr, result)</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>subprocess.SubprocessError</strong> – if command exits with return value != 0</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.core.html" title="Previous document">codesign.core package</a>
+        </li>
+        <li>
+          <a href="tests.html" title="Next document">tests package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, knk Business Software AG.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/codesign.util.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

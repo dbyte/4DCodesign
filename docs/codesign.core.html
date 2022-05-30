@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>codesign.core package &#8212; 4DCodesign 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="codesign.util package" href="codesign.util.html" />
+    <link rel="prev" title="codesign package" href="codesign.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">4DCodesign</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="codesign.html">codesign package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#module-codesign">Package contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="codesign.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codesign.html#module-codesign.main">codesign.main module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="codesign.html">codesign package</a><ul>
+      <li>Previous: <a href="codesign.html" title="previous chapter">codesign package</a></li>
+      <li>Next: <a href="codesign.util.html" title="next chapter">codesign.util package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.html" title="Previous document">codesign package</a>
+        </li>
+        <li>
+          <a href="codesign.util.html" title="Next document">codesign.util package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="codesign-core-package">
+<h1>codesign.core package<a class="headerlink" href="#codesign-core-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-codesign.core">
+<span id="package-contents"></span><h2>Package contents<a class="headerlink" href="#module-codesign.core" title="Permalink to this headline">¶</a></h2>
+<p>Codesign core objects.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="codesign.core.IS_LINUX">
+<span class="sig-prename descclassname"><span class="pre">codesign.core.</span></span><span class="sig-name descname"><span class="pre">IS_LINUX</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#codesign.core.IS_LINUX" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if current OS is Linux</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="codesign.core.IS_MACOS">
+<span class="sig-prename descclassname"><span class="pre">codesign.core.</span></span><span class="sig-name descname"><span class="pre">IS_MACOS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#codesign.core.IS_MACOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if current OS is macOS</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="codesign.core.IS_RUNNING_AZURE_PIPELINE">
+<span class="sig-prename descclassname"><span class="pre">codesign.core.</span></span><span class="sig-name descname"><span class="pre">IS_RUNNING_AZURE_PIPELINE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#codesign.core.IS_RUNNING_AZURE_PIPELINE" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if an Azure Pipeline called the program, else False.
+This environment variable is set by the calling Azure process.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="codesign.core.IS_WINDOWS">
+<span class="sig-prename descclassname"><span class="pre">codesign.core.</span></span><span class="sig-name descname"><span class="pre">IS_WINDOWS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#codesign.core.IS_WINDOWS" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if current OS is Windows</p>
+</dd></dl>
+
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-codesign.core.codesign">
+<span id="codesign-core-codesign-module"></span><h2>codesign.core.codesign module<a class="headerlink" href="#module-codesign.core.codesign" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">codesign.core.codesign.</span></span><span class="sig-name descname"><span class="pre">Codesign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#codesign.core.codesign_config.CodesignConfig" title="codesign.core.codesign_config.CodesignConfig"><span class="pre">core.codesign_config.CodesignConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles complete codesign / re-sign for macOS 4D <code class="docutils literal notranslate"><span class="pre">*.app</span></code> bundles (Standalone, Client, Server).</p>
+<p>Python port of from Keisuke Miyako’s <a class="reference external" href="https://github.com/miyako/4d-class-build-application/blob/main/Project/Sources/Classes/SignApp.4dm/">4D code</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Signing mobile applications is not yet implemented/ported.</p>
+</div>
+<p>Normally, 4D’s built-in function for signing is sufficient. However, if things change
+in the <code class="docutils literal notranslate"><span class="pre">*.app</span></code> bundles AFTER the 4D-internal BUILD APPLICATION() has been run, this invalidates
+the macOS signature.</p>
+<p>In addition, plugins, components, etc. which may not have been correctly signed before
+BUILD APPLICATION() was called, can still be signed here on a granular base.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the moment (4D v19 R4) there also seems to be an issue with codesigning of two
+(4D-internal) arm64 libs:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*.app/Contents/Database/Libraries/lib4d-arm64.dylib</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*.app/Contents/Server</span> <span class="pre">Database/Libraries/lib4d-arm64.dylib</span></code></p></li>
+</ul>
+<p>which apparently are not correctly signed by 4D in the built-in signature process.
+Therefore, unfortunately, this module is currently (4D v19 R4) still necessary, but we’ve disabled
+most functionalities by configuration for our needs. Feel free to enable them in properties
+<a class="reference internal" href="#codesign.core.codesign_config.CodesignConfig.runner_options" title="codesign.core.codesign_config.CodesignConfig.runner_options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">runner_options</span></code></a></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.codesign">
+<span class="sig-name descname"><span class="pre">codesign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_to_sign</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardened_runtime</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.codesign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main entry point to sign a file or bundle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item_to_sign</strong> – The file or bundle which is about to be signed</p></li>
+<li><p><strong>hardened_runtime</strong> – True if the item must be hardened for runtime</p></li>
+<li><p><strong>options</strong> – optional dictionary with signing-options. Constraints are
+‘mecab’ (bool), ‘local’ (bool), ‘force’ (bool)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.config">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#codesign.core.codesign_config.CodesignConfig" title="codesign.core.codesign_config.CodesignConfig"><span class="pre">core.codesign_config.CodesignConfig</span></a></em><a class="headerlink" href="#codesign.core.codesign.Codesign.config" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Public codesigning configuration</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.lowercase_executable_name">
+<span class="sig-name descname"><span class="pre">lowercase_executable_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_plist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.lowercase_executable_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes bundle executable name to lowercase in plist file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_plist</strong> – Path to the Info.plist</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.pre_cleanup">
+<span class="sig-name descname"><span class="pre">pre_cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.pre_cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actually removes signatures from the app bundle and some nested stuff.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.remove_component_plugins">
+<span class="sig-name descname"><span class="pre">remove_component_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.remove_component_plugins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looks for item(s) ‘Plugins’ exactly one level under each found
+component and deletes it/them.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.remove_php">
+<span class="sig-name descname"><span class="pre">remove_php</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.remove_php" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes php for macOS</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.remove_temp_files">
+<span class="sig-name descname"><span class="pre">remove_temp_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.remove_temp_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes temporary codesigning files, possibly created after abort</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launches the complete signing process for the given application bundle,
+located at CodesignConfig.path_to_app_bundle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_app">
+<span class="sig-name descname"><span class="pre">sign_app</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_app" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs the main application bundle (self.path_to_app_bundle).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_bin_dir">
+<span class="sig-name descname"><span class="pre">sign_bin_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_bin_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs recursively a (presumably optional) ‘bin’ directory</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_components">
+<span class="sig-name descname"><span class="pre">sign_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs recursively all items with suffix .html, .json, .js, .dylib
+within the ‘Components’ directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_contents">
+<span class="sig-name descname"><span class="pre">sign_contents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs files(!) one level below the ‘Contents’ directory with some exceptions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_database">
+<span class="sig-name descname"><span class="pre">sign_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suffixes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs recursively all items with suffix .html, .json, .js, .dylib
+within the ‘Database’ or ‘Server Database’ directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>suffixes</strong> – List of file extensions to which signing should be applied
+Example: [‘.html’, ‘.dylib’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_frameworks">
+<span class="sig-name descname"><span class="pre">sign_frameworks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_frameworks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs top-level items of the ‘Frameworks’ directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_helpers">
+<span class="sig-name descname"><span class="pre">sign_helpers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_helpers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs HelperTool, InstallTool, LaunchService</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_internal_components">
+<span class="sig-name descname"><span class="pre">sign_internal_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_internal_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs recursively all items, filtered by some given suffixes
+within the ‘Internal Components’ directory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_mecab">
+<span class="sig-name descname"><span class="pre">sign_mecab</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_mecab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs mecab bundle if exists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_mobile">
+<span class="sig-name descname"><span class="pre">sign_mobile</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_mobile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_native_components">
+<span class="sig-name descname"><span class="pre">sign_native_components</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_native_components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mainly deep-signs WebViewerCEF.bundle and its frameworks, then resigns all other
+bundles, then re-signs directory ‘Native Components’ and their frameworks (bottom-up).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Use is not yet recommended!</strong>
+Although everything is correctly notarized by Apple later on,
+there is a problem with this action: The app cannot establish connections to external websites
+and the macOS ‘Activities’ App shows the process ‘ReportCrash’, which goes completely crazy and
+causes the processor to glow.</p>
+<p>Maybe our port of the original 4D-code is buggy here.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_php">
+<span class="sig-name descname"><span class="pre">sign_php</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_php" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs php for macOS</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_plugins">
+<span class="sig-name descname"><span class="pre">sign_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_plugins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs each plugin (and optionally moves its manifest.json)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_sasl_plugins">
+<span class="sig-name descname"><span class="pre">sign_sasl_plugins</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_sasl_plugins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actually signs libdigestmd5.plugin</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.sign_updater">
+<span class="sig-name descname"><span class="pre">sign_updater</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.sign_updater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signs Updater.app and its frameworks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign.Codesign.update_info_plist">
+<span class="sig-name descname"><span class="pre">update_info_plist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_plist</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign.Codesign.update_info_plist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the given Info.plist file by passing custom_keys or default keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_plist</strong> – Path to the Info.plist</p></li>
+<li><p><strong>custom_keys</strong> – optional; custom_keys dict if passed, else we’re using
+fixed default keys from default_info_plist_properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-codesign.core.codesign_config">
+<span id="codesign-core-codesign-config-module"></span><h2>codesign.core.codesign_config module<a class="headerlink" href="#module-codesign.core.codesign_config" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">codesign.core.codesign_config.</span></span><span class="sig-name descname"><span class="pre">CodesignConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_app_bundle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signing_identity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plist_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Configuration handler for codesigning.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.default_hardened_runtime_entitlements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_hardened_runtime_entitlements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.default_hardened_runtime_entitlements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hardened Runtime entitlements
+See: <a class="reference external" href="https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc">https://developer.apple.com/documentation/security/hardened_runtime_entitlements?language=objc</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Default entitlements as dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.default_info_plist_properties">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_info_plist_properties</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.default_info_plist_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keys to always insert in Info.plist (UsageDescription) because they can not be added later.
+See: <a class="reference external" href="https://developer.apple.com/documentation/bundleresources/information_property_list">https://developer.apple.com/documentation/bundleresources/information_property_list</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Default properties as dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.find_signing_identity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">find_signing_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">of_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.find_signing_identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds first name (aka identity) of an installed codesigning-certificate
+whose type must be narrowed by parameter ‘of_type’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>of_type</strong> – Examples: ‘Developer ID Application’, ‘Developer ID Installer’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>First found identity name, f.e. ‘Developer ID Application: Your Organization (1AB1234567)’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.path_to_app_bundle">
+<span class="sig-name descname"><span class="pre">path_to_app_bundle</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pathlib.Path</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.path_to_app_bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Qualified path to the 4D application bundle (e.g. /Users/xy/4D/build/out/My4D.app)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.plist_data">
+<span class="sig-name descname"><span class="pre">plist_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.plist_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional; a dict of custom plist data if passed. Defaults to fixed keys which are defined
+at self.default_info_plist_properties</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.runner_options">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">runner_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.runner_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines common options for the complete run of the signing process.
+Ordered by call sequence, which is defined within function ‘run()’.</p>
+<p>NOTE: These setting are dedicated to our 4D application. Different 4D applications may need
+different settings. Feel free to change them for your needs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The common options used while running the signing process.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.signing_identity">
+<span class="sig-name descname"><span class="pre">signing_identity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.signing_identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional. Defaults to automatic search for ‘Developer ID Application’ entry in keychain.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="codesign.core.codesign_config.CodesignConfig.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.core.codesign_config.CodesignConfig.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates if configuration is valid for signing.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.html" title="Previous document">codesign package</a>
+        </li>
+        <li>
+          <a href="codesign.util.html" title="Next document">codesign.util package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, knk Business Software AG.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/codesign.core.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

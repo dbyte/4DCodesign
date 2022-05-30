@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>tests package &#8212; 4DCodesign 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests.core package" href="tests.core.html" />
+    <link rel="prev" title="codesign.util package" href="codesign.util.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">4DCodesign</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="codesign.html">codesign package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests">Package contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tests.testhelper">tests.testhelper module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="codesign.util.html" title="previous chapter">codesign.util package</a></li>
+      <li>Next: <a href="tests.core.html" title="next chapter">tests.core package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+              <div class="related top">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.util.html" title="Previous document">codesign.util package</a>
+        </li>
+        <li>
+          <a href="tests.core.html" title="Next document">tests.core package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+
+          <div class="body" role="main">
+            
+  <section id="tests-package">
+<h1>tests package<a class="headerlink" href="#tests-package" title="Permalink to this headline">¶</a></h1>
+<section id="module-tests">
+<span id="package-contents"></span><h2>Package contents<a class="headerlink" href="#module-tests" title="Permalink to this headline">¶</a></h2>
+<p>Package for unit &amp; integration tests, driven by stubs/fixtures &amp; production data.
+To run tests via zsh command line, cd into the project root directory ‘4DCodesign’ and call for example:</p>
+<ul class="simple">
+<li><p>Run ALL tests:
+% python -m unittest discover -v -s tests -t .</p></li>
+<li><p>Run all tests for package ‘core’:
+% python -m unittest discover -v -s tests.core</p></li>
+<li><p>Run all tests for package ‘util’:
+% python -m unittest discover -v -s tests.util</p></li>
+<li><p>Run test of module ‘test_processes.py’ for package ‘util’:
+% python -m unittest -v tests.util.test_processes</p></li>
+</ul>
+</section>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tests.core.html">tests.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.core.html#module-tests.core">Package contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.core.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.core.html#module-tests.core.test_codesign">tests.core.test_codesign module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.core.html#module-tests.core.test_codesign_config">tests.core.test_codesign_config_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tests.util.html">tests.util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.util.html#module-tests.util">Package contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.util.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.util.html#module-tests.util.test_codesigning">tests.util.test_codesigning module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.util.html#module-tests.util.test_processes">tests.util.test_processes module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-tests.testhelper">
+<span id="tests-testhelper-module"></span><h2>tests.testhelper module<a class="headerlink" href="#module-tests.testhelper" title="Permalink to this headline">¶</a></h2>
+<p>This module provides several helpers for frequently used test-objects.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.DEVELOPER_ID_APPLICATION_ENTRY">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">DEVELOPER_ID_APPLICATION_ENTRY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Developer</span> <span class="pre">ID</span> <span class="pre">Application:</span> <span class="pre">Fantastic</span> <span class="pre">Software</span> <span class="pre">AG</span> <span class="pre">(1XY2345678)'</span></em><a class="headerlink" href="#tests.testhelper.DEVELOPER_ID_APPLICATION_ENTRY" title="Permalink to this definition">¶</a></dt>
+<dd><p>..warning :: Replace this string with your codesigning identity string as stored in your macOS keychain.
+Otherwise, related tests will fail:</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tests.testhelper.MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constant string message for skipped tests if  PATH_TO_4D_TEMPLATE_APP does not exist.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.PATH_TO_4D_TEMPLATE_APP">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">PATH_TO_4D_TEMPLATE_APP</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tests.testhelper.PATH_TO_4D_TEMPLATE_APP" title="Permalink to this definition">¶</a></dt>
+<dd><p>This .app file may be large, thus not versioned. Simply copy your 4D app bundle to this path
+and rename it to this filename to run tests on it.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.PATH_TO_FIXTURE_DIR">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">PATH_TO_FIXTURE_DIR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tests.testhelper.PATH_TO_FIXTURE_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to test-fixtures root</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.PATH_TO_TEMP_DIR">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">PATH_TO_TEMP_DIR</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tests.testhelper.PATH_TO_TEMP_DIR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to temporary modified or generated test resources</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="tests.testhelper.PATH_TO_TEST_RESOURCES">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">PATH_TO_TEST_RESOURCES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#tests.testhelper.PATH_TO_TEST_RESOURCES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to test resources.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.testhelper.create_app_template_file_copy">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">create_app_template_file_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#tests.testhelper.create_app_template_file_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Keeps our test fixture save - creates a copy for tests and deeply removes its signature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Path to the working copy of the app</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.testhelper.create_temp_testing_dir">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">create_temp_testing_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#tests.testhelper.create_temp_testing_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes testing-directory ‘tests/resources/temp’ and creates a new one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Path to the empty temporary testing-directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.testhelper.remove_signing">
+<span class="sig-prename descclassname"><span class="pre">tests.testhelper.</span></span><span class="sig-name descname"><span class="pre">remove_signing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.testhelper.remove_signing" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a test helper - removes signature before doing any signing-tests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_to_item</strong> – Path to the file or bundle whose signature should be removed</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+              <div class="related bottom">
+                &nbsp;
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="codesign.util.html" title="Previous document">codesign.util package</a>
+        </li>
+        <li>
+          <a href="tests.core.html" title="Next document">tests.core package</a>
+          &rarr;
+        </li>
+    </ul>
+  </nav>
+              </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2022, knk Business Software AG.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
