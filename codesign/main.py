@@ -10,18 +10,17 @@ from util.logging import set_root_loglevel
 
 
 def main():
-    """ To run codesigning, from the command line, simply
-        |
-    1. cd into project root '4DCodesign'
-        |
-    2. Run this command: python codesign/main.py "Path/to/your/4D-application.app"
-        |
+    """ To run codesigning, from the command line, simply ::
+
+        1. cd into project root '4DCodesign'
+        2. Run this command: python codesign/main.py "Path/to/your/4D-application.app"
+
     Default log level is INFO. You can change it by passing a 2nd parameter.
-    Possible values are FATAL, ERROR, WARNING, INFO, DEBUG.
-        |
+    Possible values are **FATAL, ERROR, WARNING, INFO, DEBUG**.
+
     To trim your personal signing options, have a look at module 'codesign_config' -->
     properties: runner_options, default_info_plist_properties, default_hardened_runtime_entitlements.
-        |
+
     Cheers!
     """
     args: list[str] = sys.argv

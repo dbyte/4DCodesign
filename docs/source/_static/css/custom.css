@@ -1,0 +1,17 @@
+/* Added by T. Fornalik */
+
+/* This line is theme specific - it includes the base theme CSS */
+@import '../alabaster.css';  /* for Alabaster */
+
+body {
+    font-size: 14px !important;
+}
+
+.sig-object {
+	font-size: 0.9em;
+	margin-top: 20px;
+	background-color: #f2f9ec;
+	outline-style: solid;
+	outline-color: #e8e8e8;
+	outline-width: 1px;
+}

@@ -17,31 +17,33 @@ logger = LOGGING.getLogger(__name__)
 
 class Codesign:
     # noinspection GrazieInspection
-    """ Handles complete codesign / re-sign for macOS 4D *.app bundles (Standalone, Client, Server).
-                |
-            Ported from Keisuke Miyako's 4D code at
-            https://github.com/miyako/4d-class-build-application/blob/main/Project/Sources/Classes/SignApp.4dm
-            to Python.
-            Note: Signing mobile applications is not yet implemented/ported.
-                |
-            Normally, 4D's built-in function for signing is sufficient. However, if things change
-            in the *.app bundles AFTER the 4D-internal BUILD APPLICATION() has been run, this invalidates
-            the macOS signature.
-                |
-            In addition, plugins, components, etc. which may not have been correctly signed before
-            BUILD APPLICATION() was called, can still be signed here on a granular base.
-            At the moment (4D v19 R4) there also seems to be an issue with codesigning of two
-            (4D-internal) arm64 libs:
+    """ Handles complete codesign / re-sign for macOS 4D ``*.app`` bundles (Standalone, Client, Server).
 
-            '*.app/Contents/Database/Libraries/lib4d-arm64.dylib'
-            and
-            '*.app/Contents/Server Database/Libraries/lib4d-arm64.dylib'
+    Python port of from Keisuke Miyako's `4D code <https://github.com/miyako/4d-class-build-application/blob/
+    main/Project/Sources/Classes/SignApp.4dm/>`_.
 
-            which apparently are not correctly signed by 4D in the built-in signature process.
-            Therefore, unfortunately, this module is currently (4D v19 R4) still necessary, but we've disabled
-            most functionalities by configuration for our needs. Feel free to enable them in method
-            CodesignConfig.runnerOptions
-            """
+    .. note::
+        Signing mobile applications is not yet implemented/ported.
+
+    Normally, 4D's built-in function for signing is sufficient. However, if things change
+    in the ``*.app`` bundles AFTER the 4D-internal BUILD APPLICATION() has been run, this invalidates
+    the macOS signature.
+
+    In addition, plugins, components, etc. which may not have been correctly signed before
+    BUILD APPLICATION() was called, can still be signed here on a granular base.
+
+    .. note::
+        At the moment (4D v19 R4) there also seems to be an issue with codesigning of two
+        (4D-internal) arm64 libs:
+
+        * ``*.app/Contents/Database/Libraries/lib4d-arm64.dylib``
+        * ``*.app/Contents/Server Database/Libraries/lib4d-arm64.dylib``
+
+        which apparently are not correctly signed by 4D in the built-in signature process.
+        Therefore, unfortunately, this module is currently (4D v19 R4) still necessary, but we've disabled
+        most functionalities by configuration for our needs. Feel free to enable them in properties
+        :py:attr:`~.core.codesign_config.CodesignConfig.runner_options`
+    """
 
     def __init__(self, config: CodesignConfig):
         self.__config: CodesignConfig = config
@@ -163,13 +165,16 @@ class Codesign:
     def sign_native_components(self):
         """ Mainly deep-signs WebViewerCEF.bundle and its frameworks, then resigns all other
         bundles, then re-signs directory 'Native Components' and their frameworks (bottom-up).
-            |
-        WARNING: Use is not recommended! Although everything is correctly notarized by Apple later on,
-        there is a problem with this action: The app cannot establish connections to external websites
-        and the macOS 'Activities' App shows the process 'ReportCrash', which goes completely crazy and
-        causes the processor to glow.
-            |
-        Maybe our port of the original 4D-code is buggy here.
+
+        .. warning::
+
+            **Use is not yet recommended!**
+            Although everything is correctly notarized by Apple later on,
+            there is a problem with this action: The app cannot establish connections to external websites
+            and the macOS 'Activities' App shows the process 'ReportCrash', which goes completely crazy and
+            causes the processor to glow.
+
+            Maybe our port of the original 4D-code is buggy here.
         """
 
         def sign_hardened():

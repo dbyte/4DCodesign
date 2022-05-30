@@ -5,7 +5,7 @@ from unittest import TestCase
 
 from core import IS_WINDOWS
 from core.codesign_config import CodesignConfig
-from testhelper import create_temp_testing_dir, DEVELOPER_ID_APPLICATION_ENTRY
+from tests.testhelper import create_temp_testing_dir, DEVELOPER_ID_APPLICATION_ENTRY
 from util.logging import set_root_loglevel
 
 

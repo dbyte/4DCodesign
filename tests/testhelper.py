@@ -7,18 +7,37 @@ from typing import Final
 
 from util import processes
 
-PATH_TO_4D_TEMPLATE_APP: Final[Path] = Path('tests/resources/fixtures/4D-template-complete.app')
+PATH_TO_TEST_RESOURCES: Final[Path] = Path(__file__).parent / 'resources'
+""" Path to test resources.
+
+:meta hide-value: """
+
+PATH_TO_TEMP_DIR: Final[Path] = PATH_TO_TEST_RESOURCES / 'temp'
+""" Path to temporary modified or generated test resources
+
+:meta hide-value: """
+
+PATH_TO_FIXTURE_DIR: Final[Path] = PATH_TO_TEST_RESOURCES / 'fixtures'
+""" Path to test-fixtures root
+
+:meta hide-value: """
+
+PATH_TO_4D_TEMPLATE_APP: Final[Path] = PATH_TO_FIXTURE_DIR / '4D-template-complete.app'
 """ This .app file may be large, thus not versioned. Simply copy your 4D app bundle to this path
-and rename it to this filename to run tests on it.  """
+and rename it to this filename to run tests on it.
+
+:meta hide-value: """
 
 MESSAGE_SKIPPED_CAUSED_BY_TEMPLATE: Final[str] = \
     'To run this test, create a complete valid 4D-template-complete.app at the expected location ' \
     f'(it must be located at {PATH_TO_4D_TEMPLATE_APP})'
+""" Constant string message for skipped tests if  PATH_TO_4D_TEMPLATE_APP does not exist.
 
-# IMPORTANT
-# Replace this string with your codesigning identity string as stored in your macOS keychain.
-# Otherwise, related tests will fail:
+:meta hide-value: """
+
 DEVELOPER_ID_APPLICATION_ENTRY: Final[str] = 'Developer ID Application: Fantastic Software AG (1XY2345678)'
+""" ..warning :: Replace this string with your codesigning identity string as stored in your macOS keychain.
+Otherwise, related tests will fail: """
 
 
 def create_temp_testing_dir() -> Path:
@@ -26,7 +45,7 @@ def create_temp_testing_dir() -> Path:
 
     :return: Path to the empty temporary testing-directory
     """
-    path_to_temp_dir: Path = Path('tests/resources/temp').resolve()
+    path_to_temp_dir: Path = PATH_TO_TEMP_DIR.resolve()
 
     shutil.rmtree(path_to_temp_dir, ignore_errors=True)
     path_to_temp_dir.mkdir()
