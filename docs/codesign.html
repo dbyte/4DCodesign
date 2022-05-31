@@ -138,11 +138,14 @@
 <dt class="sig sig-object py" id="codesign.main.main">
 <span class="sig-prename descclassname"><span class="pre">codesign.main.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#codesign.main.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>To run codesigning, from the command line, simply</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">cd</span> <span class="n">into</span> <span class="n">project</span> <span class="n">root</span> <span class="s1">&#39;4DCodesign&#39;</span>
-<span class="mf">2.</span> <span class="n">Run</span> <span class="n">this</span> <span class="n">command</span><span class="p">:</span> <span class="n">python</span> <span class="n">codesign</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;Path/to/your/4D-application.app&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">a</span> <span class="n">valid</span> <span class="s1">&#39;Developer ID Application&#39;</span> <span class="n">certificate</span> <span class="ow">is</span> <span class="n">installed</span> <span class="n">on</span> <span class="n">the</span> <span class="n">machine</span>
+<span class="mf">2.</span> <span class="n">cd</span> <span class="n">into</span> <span class="n">project</span> <span class="n">root</span> <span class="s1">&#39;4DCodesign&#39;</span>
+<span class="mf">3.</span> <span class="n">Run</span> <span class="n">this</span> <span class="n">command</span><span class="p">:</span> <span class="n">python</span> <span class="n">codesign</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;Path/to/your/4D-application.app&quot;</span>
+   <span class="ow">or</span>
+   <span class="n">python</span> <span class="n">codesign</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="s2">&quot;Path/to/your/4D-application.app&quot;</span> <span class="s2">&quot;&lt;Your Apple Developer Certificate name&gt;&quot;</span>
 </pre></div>
 </div>
-<p>Default log level is INFO. You can change it by passing a 2nd parameter.
+<p>Default log level is INFO. You can change it by passing a 3rd parameter.
 Possible values are <strong>FATAL, ERROR, WARNING, INFO, DEBUG</strong>.</p>
 <p>To trim your personal signing options, have a look at module ‘codesign_config’ –&gt;
 properties: runner_options, default_info_plist_properties, default_hardened_runtime_entitlements.</p>
