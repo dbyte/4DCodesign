@@ -12,10 +12,13 @@ from util.logging import set_root_loglevel
 def main():
     """ To run codesigning, from the command line, simply ::
 
-        1. cd into project root '4DCodesign'
-        2. Run this command: python codesign/main.py "Path/to/your/4D-application.app"
+        1. Check if a valid 'Developer ID Application' certificate is installed on the machine
+        2. cd into project root '4DCodesign'
+        3. Run this command: python codesign/main.py "Path/to/your/4D-application.app"
+           or
+           python codesign/main.py "Path/to/your/4D-application.app" "<Your Apple Developer Certificate name>"
 
-    Default log level is INFO. You can change it by passing a 2nd parameter.
+    Default log level is INFO. You can change it by passing a 3rd parameter.
     Possible values are **FATAL, ERROR, WARNING, INFO, DEBUG**.
 
     To trim your personal signing options, have a look at module 'codesign_config' -->
@@ -32,7 +35,14 @@ def main():
     /Users/4D/build/out/My4D Client.app
     """
 
-    loglevel_name: str | None = args[2] if len(args) > 2 else 'INFO'
+    signing_identity: str | None = args[2] if len(args) > 2 else None
+    """ Name of 'Developer ID Application' certificate entry in the macOS keychain. Optional.
+    Example: 'Developer ID Application: Your Organization (1AB1234567)'
+    If arg is not passed or is passed with an empty string, it defaults to automatic search
+    for the first 'Developer ID Application' entry in keychain.
+    """
+
+    loglevel_name: str | None = args[3] if len(args) > 3 else 'INFO'
     """ Python log level as string. Optional, defaults to 'INFO'.
     Constraints: FATAL, ERROR, WARNING, INFO, DEBUG
     """
@@ -44,7 +54,7 @@ def main():
     # Passing plist_data=None means: Configuration will use its default plist data.
     codesign_config: CodesignConfig = CodesignConfig(
         Path(path_to_app_bundle),
-        signing_identity=None,
+        signing_identity=signing_identity,
         plist_data=None)
 
     # Create a Codesign instance and run codesigning for the given path_to_app_bundle.

@@ -6,12 +6,15 @@ A Python port of Keisuke Miyako's [4d-class-build-application, SignApp.4dm](http
 ![fourdVersion](https://img.shields.io/badge/4D%20compatibility-v19R4%2B-blue)
 ![pythonVersion](https://img.shields.io/badge/Python-3.10-blue)
 
+## Docs
+Code documentation can be found [here](https://dbyte.github.io/4DCodesign/).
+
 ## Preparation
 ### Codesigning identity
 For the signing process and its unit tests to succeed, a valid Apple developer certificate must be installed in the executing machine's keychain.
 Its name must begin with "Developer ID Application:". Example: "Developer ID Application: Your Organization (1AB1234567)".
-The code is prepared for optional passing of that name as another argument via command line, but not activated yet.
-It will be looked up in your keychain. The first found entry beginning with "Developer ID Application:" will be selected for the signing process.
+You can optionally pass that name as another argument via command line.
+If you omit it, we will search for that pattern in the keychain and the first found entry beginning with "Developer ID Application:" will be selected for the signing process.
 
 ### Python dependencies
 For XML operations, we decided to use the lxml library for convenient and fast handling.
@@ -23,18 +26,19 @@ To install the external dependency
 ## Usage
 To run codesigning from the command line, simply
 
-1. cd into project root ```4DCodesign```
-2. Run ```python codesign/main.py "Path/to/your/4D-application.app"```
+1. Ensure a valid 'Developer ID Application' certificate is installed on the machine
+2. cd into project root ```4DCodesign```
+3. Run ```python codesign/main.py "Path/to/your/4D-application.app"```<br>
+   or
+   ```python codesign/main.py "Path/to/your/4D-application.app" "<Your Apple Developer Certificate name>"```
 
 You may pass in 4D standalone, client and server apps.
 
-Default log level is ```INFO```. You can change it by passing a 2nd parameter.
+Default log level is ```INFO```. You can change it by passing a 3rd parameter.
 Possible values are ```FATAL, ERROR, WARNING, INFO, DEBUG```.
 
 To trim your personal signing options, have a look at module ```codesign_config``` -->
 properties: ```runner_options```, ```default_info_plist_properties```, ```default_hardened_runtime_entitlements```.
-
-Cheers!
 
 ## Unit tests
 ### Preparation
