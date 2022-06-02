@@ -40,6 +40,9 @@ Possible values are ```FATAL, ERROR, WARNING, INFO, DEBUG```.
 To trim your personal signing options, have a look at module ```codesign_config``` -->
 properties: ```runner_options```, ```default_info_plist_properties```, ```default_hardened_runtime_entitlements```.
 
+Example binding in Azure DevOps CI
+![AzureCI_CodesignTask](https://user-images.githubusercontent.com/41309806/171674038-c65a594b-375d-4de7-af1a-67951ed6d9ee.png)
+
 ## Unit tests
 ### Preparation
 1. To run signing integration tests on your 4D `*.app`, you manually need to copy your `*.app` into the dedicated
