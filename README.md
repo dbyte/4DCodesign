@@ -41,7 +41,7 @@ To trim your personal signing options, have a look at module ```codesign_config`
 properties: ```runner_options```, ```default_info_plist_properties```, ```default_hardened_runtime_entitlements```.
 
 Example binding in Azure DevOps CI
-![AzureCI_CodesignTask](https://user-images.githubusercontent.com/41309806/171674038-c65a594b-375d-4de7-af1a-67951ed6d9ee.png)
+![AzureCI_CodesignTask](https://user-images.githubusercontent.com/41309806/214127345-c4dd3dcf-09e9-488d-9b98-030b4626ad40.png)
 
 ## Unit tests
 ### Preparation
